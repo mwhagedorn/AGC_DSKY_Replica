@@ -1,6 +1,6 @@
 Forked from https://github.com/r1cebank/AGC_DSKY_Replica to add my own changes and mods.
 
-p align="center">
+<p align="center">
 <b>Apollo DSKY replica files, instructions, upgrades and all information I figure out  </b><br>
 <br><br>
 <br>🐦 <a href="https://twitter.com/mkmeorg">Twitter</a>
@@ -29,6 +29,8 @@ Exact parts and supplies I used
 | Nextion Enhanced 3.5 Display | https://amzn.to/3s5FimY
 | Fosa 10 PCs Mechanical Keyboard Switch Blue Switch Transparent Keyswitch  | https://amzn.to/3DTQPbo
 | Grey PLA  | https://amzn.to/3GJDGna
+| Black PLA| 
+|Clear PLA| 
 
 
 ### Full video here:
