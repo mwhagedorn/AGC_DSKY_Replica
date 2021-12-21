@@ -29,16 +29,17 @@ Exact parts and supplies I used
 | Nextion Enhanced 3.5 Display | https://amzn.to/3s5FimY
 | Fosa 10 PCs Mechanical Keyboard Switch Blue Switch Transparent Keyswitch  | https://amzn.to/3DTQPbo
 | Grey PLA  | https://amzn.to/3GJDGna
-| Black PLA| 
-|Clear PLA| 
-
+| Black PLA | 
+| Clear PLA | 
+| 3mm x 40 cap screws | https://ebay.us/bAamab
 
 ### Full video here:
 
-TBD
+TBD http://youtube.com/mkmeorg
 
 ### Assembly
 
+- Print all parts 
 
 
 ### Documentation
