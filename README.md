@@ -45,6 +45,8 @@ TBD
 
 All AGC docs: https://www.ibiblio.org/apollo/links2.html
 
+Ultimate AGC Talk Video: https://www.youtube.com/watch?v=xx7Lfh5SKUQ
+
 ------------------------------------------------------------------------------------------------
 
 
