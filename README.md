@@ -11,7 +11,7 @@ Support this project and become a patron on <a href="https://www.patreon.com/Eri
 Chat: <a href="https://discord.gg/j9S4Fgv">Discord</a></b>!
 </p>
 
-# AGC_DSKY_Replica
+## AGC_DSKY_Replica
 
 Will add laser cut keys as well as changes to the Arduino code and display usage.  
  
@@ -33,16 +33,16 @@ Exact parts and supplies I used
 | Clear PLA | 
 | 3mm x 40 cap screws | https://ebay.us/bAamab
 
-### Full video here:
+## Full video here:
 
 TBD http://youtube.com/mkmeorg
 
-### Assembly
+## Assembly
 
 - Print all parts 
 
 
-### Documentation
+## Documentation
 
 All AGC docs: https://www.ibiblio.org/apollo/links2.html
 
@@ -57,7 +57,7 @@ Eldon Hall Talk Pt1 https://www.youtube.com/watch?v=PbX8OtPe3eY
 ------------------------------------------------------------------------------------------------
 
 
-## Forked From; https://github.com/r1cebank/AGC_DSKY_Replica
+Forked From; https://github.com/r1cebank/AGC_DSKY_Replica
 
 Mechanically accurate Apollo DSKY replica.
 
