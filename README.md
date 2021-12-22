@@ -49,10 +49,15 @@ All AGC docs: https://www.ibiblio.org/apollo/links2.html
 Ultimate AGC Talk Video: https://www.youtube.com/watch?v=xx7Lfh5SKUQ
 
 Interesting AGC Talk https://www.youtube.com/watch?v=nDZKzGYVFEk 
+
+Eldon Hall Talk Pt1 https://www.youtube.com/watch?v=PbX8OtPe3eY 
+
+
+
 ------------------------------------------------------------------------------------------------
 
 
-Forked From; https://github.com/r1cebank/AGC_DSKY_Replica
+## Forked From; https://github.com/r1cebank/AGC_DSKY_Replica
 
 Mechanically accurate Apollo DSKY replica.
 
