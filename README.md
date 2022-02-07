@@ -31,7 +31,10 @@ Exact parts and supplies I used
 | Grey PLA  | https://amzn.to/3GJDGna
 | Black PLA | 
 | Clear PLA | 
-| 3mm x 40 cap screws | https://ebay.us/bAamab
+| M33mm x 40 cap screws | https://ebay.us/bAamab
+| M3x16 countersunk (front plate holddown) | https://amzn.to/3urwtVX
+| M3 Brass Inserts (most of DSKY) | https://amzn.to/3owhshP
+|M3x5mm(L)-5.4mm(OD) brass inserts (some holes are big| https://amzn.to/35Yzz9P
 
 ## Full video here:
 
