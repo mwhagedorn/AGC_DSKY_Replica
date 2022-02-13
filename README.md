@@ -18,6 +18,10 @@ Will add laser cut keys as well as changes to the Arduino code and display usage
 Posting all files here so someday I can give back to the orginal project
 
 I will doccument the whole build in a Playlist on MKME Lab channel 
+
+Forum thread documenting this build:
+
+http://forum.mkme.org/viewtopic.php?f=4&t=1156
  
 ## Parts:
 
