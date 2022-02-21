@@ -18,6 +18,10 @@ Will add laser cut keys as well as changes to the Arduino code and display usage
 Posting all files here so someday I can give back to the orginal project
 
 I will doccument the whole build in a Playlist on MKME Lab channel 
+
+Forum thread documenting this build:
+
+http://forum.mkme.org/viewtopic.php?f=4&t=1156
  
 ## Parts:
 
@@ -29,9 +33,16 @@ Exact parts and supplies I used
 | Nextion Enhanced 3.5 Display | https://amzn.to/3s5FimY
 | Fosa 10 PCs Mechanical Keyboard Switch Blue Switch Transparent Keyswitch  | https://amzn.to/3DTQPbo
 | Grey PLA  | https://amzn.to/3GJDGna
-| Black PLA | 
-| Clear PLA | 
-| 3mm x 40 cap screws | https://ebay.us/bAamab
+| Black PLA | https://amzn.to/3J2qGKm
+| M33mm x 40 cap screws | https://ebay.us/bAamab
+| M3x16 countersunk (front plate holddown) | https://amzn.to/3urwtVX
+| M3 Brass Inserts (most of DSKY) | https://amzn.to/3owhshP
+|M3x5mm(L)-5.4mm(OD) brass inserts (some holes are big| https://amzn.to/35Yzz9P
+| 90 degree USBC Cable | https://amzn.to/3otdNkN
+| 90 degree Micro HDMI | https://amzn.to/3sq0qDf
+| DSKY LED PCB KIT | TBD 
+
+
 
 ## Full video here:
 
