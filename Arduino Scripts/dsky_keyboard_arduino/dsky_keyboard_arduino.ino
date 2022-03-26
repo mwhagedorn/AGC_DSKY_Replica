@@ -6,9 +6,13 @@
   || @description
   || | Demonstrates changing the keypad size and key values.
   || #
+
+
+  Install Keypad from Arduino Library manager
+  Authors are listed above
 */
 #include <Keypad.h>
-#include "Keyboard.h"
+#include <Keyboard.h>
 
 const byte ROWS = 5; //four rows
 const byte COLS = 4; //four columns
