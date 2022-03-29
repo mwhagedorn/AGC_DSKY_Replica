@@ -62,10 +62,8 @@ TBD http://youtube.com/mkmeorg
 Install Raspbian image
 Enable SSH, VNC and Serial 
 in terminal
-
 sudo apt-get update
 sudo apt-get upgrade 
-
 reboot
 
 From http://www.ibiblio.org/apollo/download.html#Raspberry_Pi_Raspbian_:
@@ -75,7 +73,6 @@ FYI the Pi will be using YaAGC : https://www.ibiblio.org/apollo/yaAGC.html?msclk
 sudo apt-get install wx3.0-headers 
 sudo apt-get install liballegro4-dev 
 sudo apt-get install git  (already installed) 
-
 sudo apt-get install libwxgtk3
 sudo apt-get install libncurses5-dev 
 sudo apt-get install libsdl-dev
@@ -84,7 +81,6 @@ git clone --depth 1 https://github.com/virtualagc/virtualagc
 
 cd virtualagc
 make clean install
-
 
 Put the python file in it : 
 cd /home/pi/virtualagc/piPeripheral/
