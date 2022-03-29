@@ -60,6 +60,7 @@ TBD http://youtube.com/mkmeorg
 ## Programming Pi
 
 Install Raspbian image
+Enable SSH, VNC and Serial 
 in terminal
 
 sudo apt-get update
@@ -71,14 +72,12 @@ From http://www.ibiblio.org/apollo/download.html#Raspberry_Pi_Raspbian_:
  (this was a helpful bug report https://github.com/virtualagc/virtualagc/issues/1103
 FYI the Pi will be using YaAGC : https://www.ibiblio.org/apollo/yaAGC.html?msclkid=bfcc1461aef711ecba1be6cac11bfc4d
 
-
-sudo apt-get install wx3.0-headers libwxgtk3.0 libwxgtk3.0-dev libsdl-dev libncurses5-dev liballegro4-dev git
-
-Some of these do not work anymore or have a problem- the below will take care of the remaining (you dont want to know how long it took me to figure this simple thing out)
-
-sudo apt-get install libwxgtk3.0-0v5
-sudo apt-get install libncurses5-dev libncursesw5-dev
+sudo apt-get install wx3.0-headers 
 sudo apt-get install liballegro4-dev 
+sudo apt-get install git  (already installed) 
+
+sudo apt-get install libwxgtk3
+sudo apt-get install libncurses5-dev 
 sudo apt-get install libsdl-dev
 
 git clone --depth 1 https://github.com/virtualagc/virtualagc
@@ -87,14 +86,11 @@ cd virtualagc
 make clean install
 
 
-
 Put the python file in it : 
 cd /home/pi/virtualagc/piPeripheral/
 
 Still cant run shell from desktop this fixed:
 https://stackoverflow.com/questions/14219092/bash-script-and-bin-bashm-bad-interpreter-no-such-file-or-directory
-
-put the runagc.sh in /bin 
 
 
 Now python says serial failed:
