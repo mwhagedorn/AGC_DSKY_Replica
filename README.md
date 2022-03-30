@@ -23,9 +23,8 @@ In order to 3D print them, I slightly modified them (widened some holes for bras
 A Raspberry Pi running VirtualAGC is doing the grunt work, the display is a simple LCD and the status lights are LEDs. 
 
 
-More on the [Hackaday.io project page](https://hackaday.io/project/174524).
 
-Will add laser cut keys as well as changes to the Arduino code and display usage.  
+I Will add laser cut keys as well as changes to the Arduino code and display usage.  
  
 Posting all files here so someday I can give back to the orginal project
 
