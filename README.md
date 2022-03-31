@@ -83,8 +83,9 @@ FYI the Pi will be using YaAGC : https://www.ibiblio.org/apollo/yaAGC.html?msclk
 
 sudo apt-get install wx3.0-headers 
 sudo apt-get install liballegro4-dev 
+sudo apt-get install libx11-dev
 sudo apt-get install git  (already installed) 
-sudo apt-get install libwxgtk3
+sudo apt-get install libwxgtk3.0
 sudo apt-get install libncurses5-dev 
 sudo apt-get install libsdl-dev
 
@@ -92,6 +93,13 @@ git clone --depth 1 https://github.com/virtualagc/virtualagc
 
 cd virtualagc
 make clean install
+
+
+
+
+
+
+
 
 sudo apt-get install python2
 pip install serial
@@ -105,21 +113,14 @@ cd /home/pi/virtualagc/piPeripheral/
 Still cant run shell from desktop this fixed:
 https://stackoverflow.com/questions/14219092/bash-script-and-bin-bashm-bad-interpreter-no-such-file-or-directory
 
-
-Now python says serial failed:
-pip install serial
-
 sudo su
-sudo apt-get remove python3
-
-
-
-
 
 
 ## Documentation
 
 All AGC docs: https://www.ibiblio.org/apollo/links2.html
+
+DSKY explanation and instructions http://www.ibiblio.org/apollo/yaDSKY.html 
 
 Ultimate AGC Talk Video: https://www.youtube.com/watch?v=xx7Lfh5SKUQ
 
