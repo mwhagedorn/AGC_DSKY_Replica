@@ -70,53 +70,75 @@ TBD http://youtube.com/mkmeorg
 
 ## Programming Pi
 
+From http://www.ibiblio.org/apollo/download.html#Raspberry_Pi_Raspbian_:
+ 
+this was a helpful bug report https://github.com/virtualagc/virtualagc/issues/1103
+
+Here is my discussion with Ron Burkey to make this work.  Thanks Ron!  https://github.com/virtualagc/virtualagc/discussions/1170
+
 Install Raspbian image
-Enable SSH, VNC and Serial 
-in terminal
+
+Enable SSH, VNC and Serial in sudo raspi-config 
+
 sudo apt-get update
+
 sudo apt-get upgrade 
+
 reboot
 
-From http://www.ibiblio.org/apollo/download.html#Raspberry_Pi_Raspbian_:
- (this was a helpful bug report https://github.com/virtualagc/virtualagc/issues/1103
-FYI the Pi will be using YaAGC : https://www.ibiblio.org/apollo/yaAGC.html?msclkid=bfcc1461aef711ecba1be6cac11bfc4d
-
-sudo apt-get install wx3.0-headers 
+sudo apt-get install wx3.0-headers
+ 
 sudo apt-get install liballegro4-dev 
+
 sudo apt-get install libx11-dev
+
 sudo apt-get install git  (already installed) 
+
 sudo apt-get install libwxgtk3.0
+
 sudo apt-get install libncurses5-dev 
+
 sudo apt-get install libsdl-dev
+
+sudo apt-get install screen
+
+pip install serial
+
+--fix-missing on anny errors you get (I had several)
 
 git clone --depth 1 https://github.com/virtualagc/virtualagc
 
 cd virtualagc
+
 make clean install
 
+Install provided runAGC.sh run by bash ./runAGC.sh
 
+Install provided ericDSKY.py in /home/pi/virtualagc/piPeripheral/
 
+Code currently in runAGC script is: 
 
+``` 
+#!/bin/bash
+echo "Enabling numlock"
+/usr/bin/setleds +num
 
+echo "Starting VirtualAGC"
+screen -dm bash -c "cd /home/pi/virtualagc/yaAGC/; ./yaAGC --port=19697 --core=../Colossus249/Colossus249.bin"
 
+echo "Starting DSKY"
+cd /home/pi/virtualagc/piPeripheral/
+python2 manoDSKY.py
+```
 
+Probably not needed anymore:
 
 sudo apt-get install python2
-pip install serial
-
-/usr/lib/python2.7
-
-
-Put the python file in it : 
-cd /home/pi/virtualagc/piPeripheral/
-
-Still cant run shell from desktop this fixed:
-https://stackoverflow.com/questions/14219092/bash-script-and-bin-bashm-bad-interpreter-no-such-file-or-directory
-
-sudo su
 
 
 ## Documentation
+
+The Raspberry Pi will be using YaAGC : https://www.ibiblio.org/apollo/yaAGC.html?msclkid=bfcc1461aef711ecba1be6cac11bfc4d
 
 All AGC docs: https://www.ibiblio.org/apollo/links2.html
 
@@ -128,8 +150,9 @@ Interesting AGC Talk https://www.youtube.com/watch?v=nDZKzGYVFEk
 
 Eldon Hall Talk Pt1 https://www.youtube.com/watch?v=PbX8OtPe3eY 
 
+Good explanation of the AGC https://www.youtube.com/watch?v=J-5aT2zSfSA
 
-
+Great overview of Apollo computers https://www.youtube.com/watch?v=YGymMMQbPbo
 ------------------------------------------------------------------------------------------------
 
 
