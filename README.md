@@ -1,4 +1,3 @@
-Forked from https://github.com/r1cebank/AGC_DSKY_Replica to add my own changes and mods.
 
 <p align="center">
 <b>Apollo DSKY replica files, instructions, upgrades and all information I figure out  </b><br>
@@ -6,6 +5,7 @@ Forked from https://github.com/r1cebank/AGC_DSKY_Replica to add my own changes a
 <br>🐦 <a href="https://twitter.com/mkmeorg">Twitter</a>
 | 📺 <a href="https://www.youtube.com/mkmeorg">YouTube</a>
 | 🌍 <a href="http://www.mkme.org">mkme.org</a><br>
+| ☕ <a href="https://ko-fi.com/mkmeorg">Buy me a coffee! </a><br>
 <br>
 Support this project and become a patron on <a href="https://www.patreon.com/EricWilliam">Patreon</a>.<br>
 Chat: <a href="https://discord.gg/j9S4Fgv">Discord</a></b>!
@@ -13,7 +13,7 @@ Chat: <a href="https://discord.gg/j9S4Fgv">Discord</a></b>!
 
 ## AGC_DSKY_Replica
 
-Forked From; https://github.com/r1cebank/AGC_DSKY_Replica
+Forked From; https://github.com/r1cebank/AGC_DSKY_Replica to add my own changes and mods.
 
 Mechanically accurate Apollo DSKY replica.
 
