@@ -80,11 +80,12 @@ Install Raspbian image
 
 Enable SSH, VNC and Serial in sudo raspi-config 
 
+``` 
 sudo apt-get update
 
 sudo apt-get upgrade 
 
-reboot
+sudo reboot
 
 sudo apt-get install wx3.0-headers
  
@@ -104,13 +105,17 @@ sudo apt-get install screen
 
 pip install serial
 
+``` 
+
 --fix-missing on anny errors you get (I had several)
 
+``` 
 git clone --depth 1 https://github.com/virtualagc/virtualagc
 
 cd virtualagc
 
 make clean install
+``` 
 
 Install provided runAGC.sh run by bash ./runAGC.sh
 
@@ -153,6 +158,9 @@ Eldon Hall Talk Pt1 https://www.youtube.com/watch?v=PbX8OtPe3eY
 Good explanation of the AGC https://www.youtube.com/watch?v=J-5aT2zSfSA
 
 Great overview of Apollo computers https://www.youtube.com/watch?v=YGymMMQbPbo
+
+
+Originally From 
 ------------------------------------------------------------------------------------------------
 
 
