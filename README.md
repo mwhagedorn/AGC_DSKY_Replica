@@ -140,6 +140,8 @@ Probably not needed anymore:
 
 sudo apt-get install python2
 
+enable numloc https://raspberrypi.stackexchange.com/questions/38794/enable-num-lock-at-boot-raspberry-pi?msclkid=c9a10f2ab21d11eca47d554a07129494
+
 
 ## Documentation
 
