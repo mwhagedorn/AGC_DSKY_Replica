@@ -13,7 +13,7 @@ Chat: <a href="https://discord.gg/j9S4Fgv">Discord</a></b>!
 
 ## AGC_DSKY_Replica
 
-Forked From; https://github.com/r1cebank/AGC_DSKY_Replica to add my own changes and mods.
+Forked From; https://github.com/ManoDaSilva/AGC_DSKY_Replica to add my own changes and mods.
 
 I Will add laser cut keys as well as changes to the Arduino code and display usage.  
  
@@ -153,12 +153,10 @@ From http://www.ibiblio.org/apollo/download.html#Raspberry_Pi_Raspbian_:
  
 this was a helpful bug report https://github.com/virtualagc/virtualagc/issues/1103
 
-Originally From 
-------------------------------------------------------------------------------------------------
 
 ## Original info 
 
-Forked From; https://github.com/r1cebank/AGC_DSKY_Replica
+Forked From; https://github.com/ManoDaSilva/AGC_DSKY_Replica
 
 Mechanically accurate Apollo DSKY replica.
 
