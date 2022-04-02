@@ -15,15 +15,6 @@ Chat: <a href="https://discord.gg/j9S4Fgv">Discord</a></b>!
 
 Forked From; https://github.com/r1cebank/AGC_DSKY_Replica to add my own changes and mods.
 
-Mechanically accurate Apollo DSKY replica.
-
-This project is based off the 3D models I re-created from the original MIT Instrumentation Labs drawings (those models can be found on [VirtualAGC's GitHub](https://github.com/virtualagc/virtualagc/tree/mechanical/3D-models)). 
-In order to 3D print them, I slightly modified them (widened some holes for brass inserts, keyboard, etc).
-
-A Raspberry Pi running VirtualAGC is doing the grunt work, the display is a simple LCD and the status lights are LEDs. 
-
-
-
 I Will add laser cut keys as well as changes to the Arduino code and display usage.  
  
 Posting all files here so someday I can give back to the orginal project
@@ -165,6 +156,7 @@ this was a helpful bug report https://github.com/virtualagc/virtualagc/issues/11
 Originally From 
 ------------------------------------------------------------------------------------------------
 
+## Original info 
 
 Forked From; https://github.com/r1cebank/AGC_DSKY_Replica
 
