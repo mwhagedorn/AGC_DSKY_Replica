@@ -5,7 +5,7 @@
 <br>🐦 <a href="https://twitter.com/mkmeorg">Twitter</a>
 | 📺 <a href="https://www.youtube.com/mkmeorg">YouTube</a>
 | 🌍 <a href="http://www.mkme.org">mkme.org</a><br>
-| ☕ <a href="https://ko-fi.com/mkmeorg">Buy me a coffee! </a><br> |
+| ☕ <a href="https://ko-fi.com/mkmeorg">Buy me a coffee! </a> |<br>
 <br>
 Support this project and become a patron on <a href="https://www.patreon.com/EricWilliam">Patreon</a>.<br>
 Chat: <a href="https://discord.gg/j9S4Fgv">Discord</a></b>!
@@ -70,11 +70,7 @@ TBD http://youtube.com/mkmeorg
 
 ## Programming Pi
 
-From http://www.ibiblio.org/apollo/download.html#Raspberry_Pi_Raspbian_:
- 
-this was a helpful bug report https://github.com/virtualagc/virtualagc/issues/1103
-
-Here is my discussion with Ron Burkey to make this work.  Thanks Ron!  https://github.com/virtualagc/virtualagc/discussions/1170
+Here is my discussion with Ron Burkey to make this all work.  There were NUMEROUS fixes needed. Thanks Ron!  https://github.com/virtualagc/virtualagc/discussions/1170
 
 Install Raspbian image
 
@@ -136,7 +132,7 @@ cd /home/pi/virtualagc/piPeripheral/
 python2 manoDSKY.py
 ```
 
-# Probably not needed anymore:
+### Probably not needed anymore:
 
 sudo apt-get install python2
 
@@ -162,6 +158,9 @@ Great overview of Apollo computers https://www.youtube.com/watch?v=YGymMMQbPbo
 
 enable numloc https://raspberrypi.stackexchange.com/questions/38794/enable-num-lock-at-boot-raspberry-pi?msclkid=c9a10f2ab21d11eca47d554a07129494
 
+From http://www.ibiblio.org/apollo/download.html#Raspberry_Pi_Raspbian_:
+ 
+this was a helpful bug report https://github.com/virtualagc/virtualagc/issues/1103
 
 Originally From 
 ------------------------------------------------------------------------------------------------
