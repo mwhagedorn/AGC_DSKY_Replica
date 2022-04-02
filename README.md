@@ -54,19 +54,19 @@ Exact parts and supplies I used
 | DSKY LED PCB KIT | TBD 
 
 
-
 ## Full video here:
 
 TBD http://youtube.com/mkmeorg
 
 ## Assembly
 
-- Print all parts 
+- Print all parts and assemble.  No way I'm typing this up :)
 
 ## Programming Arduinos
 
-- Program the Arduino NANO with included sketch
-- Program Pro-Micro with included sketch
+- Program the Arduino NANO with included sketch (Mine is updated/altered)
+
+- Program Pro-Micro with included sketch (original didnt work- mine is fixed)
 
 ## Programming Pi
 
@@ -136,11 +136,10 @@ cd /home/pi/virtualagc/piPeripheral/
 python2 manoDSKY.py
 ```
 
-Probably not needed anymore:
+#Probably not needed anymore:
 
 sudo apt-get install python2
 
-enable numloc https://raspberrypi.stackexchange.com/questions/38794/enable-num-lock-at-boot-raspberry-pi?msclkid=c9a10f2ab21d11eca47d554a07129494
 
 
 ## Documentation
@@ -160,6 +159,8 @@ Eldon Hall Talk Pt1 https://www.youtube.com/watch?v=PbX8OtPe3eY
 Good explanation of the AGC https://www.youtube.com/watch?v=J-5aT2zSfSA
 
 Great overview of Apollo computers https://www.youtube.com/watch?v=YGymMMQbPbo
+
+enable numloc https://raspberrypi.stackexchange.com/questions/38794/enable-num-lock-at-boot-raspberry-pi?msclkid=c9a10f2ab21d11eca47d554a07129494
 
 
 Originally From 
