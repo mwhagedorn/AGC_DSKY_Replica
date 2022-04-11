@@ -123,10 +123,18 @@ cd /home/pi/virtualagc/piPeripheral/
 python2 manoDSKY.py
 ```
 
+### Raspberry Pi Safe Shutdown Button
+
+Working on this now  https://magpi.raspberrypi.com/articles/off-switch-raspberry-pi
+
+### Start all scripts automatically at boot
+
+This needs to be figured out derrrrrrrrrrrp
+
+
 ### Probably not needed anymore:
 
 sudo apt-get install python2
-
 
 
 ## Documentation
