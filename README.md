@@ -126,11 +126,9 @@ python3 ericDSKY.py
 
 ```
 
-
 This will be reference in automatic startup below- edit this file to change what Apollo code we want to run! 
 
 Install provided ericDSKY.py in /home/pi/virtualagc/piPeripheral/
-
 
 
 ### Raspberry Pi Safe Shutdown Button
@@ -142,6 +140,8 @@ Working on this now  https://magpi.raspberrypi.com/articles/off-switch-raspberry
 https://forums.raspberrypi.com/viewtopic.php?t=263191,
 
 ```
+Make out shell script on Desktop exectable 
+
 chmod 755 test.sh
 
 sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
