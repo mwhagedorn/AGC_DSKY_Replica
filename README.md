@@ -49,6 +49,8 @@ Exact parts and supplies I used
 
 TBD http://youtube.com/mkmeorg
 
+All initial videos are included in the forum thread above- they are VLOGs of the build steps and show a lot of how to make it 
+
 ## Assembly
 
 - Print all parts and assemble.  No way I'm typing this up :)
