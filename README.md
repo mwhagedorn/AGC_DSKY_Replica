@@ -133,7 +133,73 @@ Install provided ericDSKY.py in /home/pi/virtualagc/piPeripheral/
 
 ### Raspberry Pi Safe Shutdown Button
 
-Working on this now  https://magpi.raspberrypi.com/articles/off-switch-raspberry-pi
+Source:  https://magpi.raspberrypi.com/articles/off-switch-raspberry-pi
+
+Copy shutdown.py and shutdown.sh to Desktop
+
+By doing it this way we will have terminal windows open for both the sim and for the shutdown script- Handy for debugging and monitoring! 
+
+```
+Make out shell script on Desktop exectable 
+
+chmod 755 shutdown.sh
+
+sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+
+Add this line: 
+
+@lxterminal -e /home/pi/Desktop/shutdown.sh
+
+
+```
+
+shutdown.py contents:
+
+```
+#!/usr/bin/env python3
+
+from gpiozero import Button
+
+from signal import pause
+
+import os, sys
+
+
+
+offGPIO = int(sys.argv[1]) if len(sys.argv) >= 2 else 21
+
+holdTime = int(sys.argv[2]) if len(sys.argv) >= 3 else 6
+
+
+
+# the function called to shut down the RPI
+
+def shutdown():
+
+    os.system("sudo poweroff")
+
+
+
+btn = Button(offGPIO, hold_time=holdTime)
+
+btn.when_held = shutdown
+
+pause()    # handle the button presses in the background
+
+```
+
+shutdown.sh contents:
+```
+#!/bin/bash
+echo "Starting Safe SHutdown"
+cd /home/pi/Desktop/
+python3 shutdown.py
+
+
+
+```
+
+
 
 ### Start all scripts automatically at boot
 
