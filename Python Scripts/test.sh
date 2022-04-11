@@ -7,6 +7,9 @@ for tty in /dev/tty[1-6]; do
 done
 echo "Starting VirtualAGC"
 screen -dm bash -c "cd /home/pi/virtualagc/yaAGC/; ./yaAGC --port=19697 --core=../Colossus249/Colossus249.bin"
+echo "Starting Safe SHutdown"
+cd /home/pi/Desktop/
+python3 shutdown.py
 echo "Starting DSKY"
 cd /home/pi/virtualagc/piPeripheral/
 python3 ericDSKY.py

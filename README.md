@@ -135,6 +135,8 @@ Install provided ericDSKY.py in /home/pi/virtualagc/piPeripheral/
 
 Source:  https://magpi.raspberrypi.com/articles/off-switch-raspberry-pi
 
+This code creates a button on GPIO 21, waits for it to be pressed, then executes the system command to power down the Raspberry Pi. GPIO 21 is nice because it’s on pin 40 of the 40-pin header and sits right next to a ground connection on pin 39. This combination makes it difficult for an off-switch to be plugged in incorrectly.
+
 Copy shutdown.py and shutdown.sh to Desktop
 
 By doing it this way we will have terminal windows open for both the sim and for the shutdown script- Handy for debugging and monitoring! 
@@ -201,7 +203,7 @@ python3 shutdown.py
 
 
 
-### Start all scripts automatically at boot
+### Start The AGC automatically at boot
 
 https://forums.raspberrypi.com/viewtopic.php?t=263191,
 
