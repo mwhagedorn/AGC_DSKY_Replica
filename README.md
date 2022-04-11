@@ -106,24 +106,32 @@ cd virtualagc
 make clean install
 ``` 
 
-Install provided runAGC.sh run by bash ./runAGC.sh
+Install provided test.sh on the Desktop run by bash ./test.sh
 
-Install provided ericDSKY.py in /home/pi/virtualagc/piPeripheral/
-
-Code currently in runAGC script is: 
+Current contents are: 
 
 ``` 
 #!/bin/bash
 echo "Enabling numlock"
-/usr/bin/setleds +num
-
+setleds=+num
+# Turn Numlock on for the TTYs:
+for tty in /dev/tty[1-6]; do
+    /usr/bin/setleds -D +num < "$tty";
+done
 echo "Starting VirtualAGC"
 screen -dm bash -c "cd /home/pi/virtualagc/yaAGC/; ./yaAGC --port=19697 --core=../Colossus249/Colossus249.bin"
-
 echo "Starting DSKY"
 cd /home/pi/virtualagc/piPeripheral/
-python2 manoDSKY.py
+python3 ericDSKY.py
+
 ```
+
+
+This will be reference in automatic startup below- edit this file to change what Apollo code we want to run! 
+
+Install provided ericDSKY.py in /home/pi/virtualagc/piPeripheral/
+
+
 
 ### Raspberry Pi Safe Shutdown Button
 
@@ -131,7 +139,20 @@ Working on this now  https://magpi.raspberrypi.com/articles/off-switch-raspberry
 
 ### Start all scripts automatically at boot
 
-This needs to be figured out derrrrrrrrrrrp
+https://forums.raspberrypi.com/viewtopic.php?t=263191,
+
+```
+chmod 755 test.sh
+
+sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+
+Add this line: 
+
+@lxterminal -e /home/pi/Desktop/test.sh
+
+
+sudo reboot
+```
 
 
 ### Probably not needed anymore:
