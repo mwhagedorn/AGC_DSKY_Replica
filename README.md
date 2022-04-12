@@ -141,6 +141,8 @@ Copy shutdown.py and shutdown.sh to Desktop
 
 By doing it this way we will have terminal windows open for both the sim and for the shutdown script- Handy for debugging and monitoring! 
 
+You wat this script first in autostart or input will go to wrong terminal window
+
 ```
 Make out shell script on Desktop exectable 
 
@@ -154,6 +156,22 @@ Add this line:
 
 
 ```
+
+
+New way Eric trying so it doesnt get stucK when running the agc and another terminal for shutdown 
+
+https://www.itechfy.com/tech/auto-run-python-program-on-raspberry-pi-startup/
+
+sudo nano /etc/rc.local
+
+add this line to run the python file 
+
+sudo python /home/pi/Desktop/shutdown.py &
+
+Rmoved the .sh from autostart- this method will be way better anyhow as it doesnt take another .sh file to run it 
+
+
+
 
 shutdown.py contents:
 
