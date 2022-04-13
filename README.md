@@ -134,6 +134,11 @@ This will be referenced in automatic startup below- edit this file to change wha
 
 Install provided ericDSKY.py in /home/pi/virtualagc/piPeripheral/
 
+Contents of ericDSKY.py
+```
+way too big for the readme but I had to edit from the original file to run
+
+```
 
 ### Start The AGC automatically at boot
 
