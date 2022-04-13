@@ -141,35 +141,33 @@ Copy shutdown.py and shutdown.sh to Desktop
 
 By doing it this way we will have terminal windows open for both the sim and for the shutdown script- Handy for debugging and monitoring! 
 
-You wat this script first in autostart or input will go to wrong terminal window
+Do the below to make the bash scrip executable and use it to run python (adding python to cron does not work for unknown reason) 
 
 ```
 Make out shell script on Desktop exectable 
 
 chmod 755 shutdown.sh
 
-sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+We will add this to cron same as this tutorial: https://raspberrytips.com/autostart-a-program-on-boot/
 
-Add this line: 
+and this one: https://www.raspberrypi-spy.co.uk/2013/07/running-a-python-script-at-boot-using-cron/#:~:text=Using%20your%20cursor%20keys%20scroll%20to%20the%20bottom,want%20to%20run%20Python%20with%20the%20script%20MyScript.py.
 
-@lxterminal -e /home/pi/Desktop/shutdown.sh
+Open a terminal.
+
+Open the crontab file:
+
+crontab -e
+
+You get an empty crontab file- we will add a line to the bottom below the comments
+
+Paste a line starting with reboot, and add your script command just after, like this:
+
+@reboot /home/pi/Desktop/shutdown.sh
+
+Save and exit (CTRL+O, CTRL+X with nano).
 
 
 ```
-
-
-New way Eric trying so it doesnt get stucK when running the agc and another terminal for shutdown 
-
-https://www.itechfy.com/tech/auto-run-python-program-on-raspberry-pi-startup/
-
-sudo nano /etc/rc.local
-
-add this line to run the python file 
-
-sudo python /home/pi/Desktop/shutdown.py &
-
-Rmoved the .sh from autostart- this method will be way better anyhow as it doesnt take another .sh file to run it 
-
 
 
 
@@ -215,10 +213,7 @@ echo "Starting Safe SHutdown"
 cd /home/pi/Desktop/
 python3 shutdown.py
 
-
-
 ```
-
 
 
 ### Start The AGC automatically at boot
