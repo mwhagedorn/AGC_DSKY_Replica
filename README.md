@@ -106,7 +106,11 @@ cd virtualagc
 make clean install
 ``` 
 
-Install provided test.sh on the Desktop run by bash ./test.sh
+Install provided test.sh on the Desktop 
+
+Test run by 
+
+sudo bash ./test.sh
 
 Current contents are: 
 
@@ -126,9 +130,28 @@ python3 ericDSKY.py
 
 ```
 
-This will be reference in automatic startup below- edit this file to change what Apollo code we want to run! 
+This will be referenced in automatic startup below- edit this file to change what Apollo code we want to run! 
 
 Install provided ericDSKY.py in /home/pi/virtualagc/piPeripheral/
+
+
+### Start The AGC automatically at boot
+
+https://forums.raspberrypi.com/viewtopic.php?t=263191,
+
+```
+Make out shell script on Desktop exectable 
+
+chmod 755 test.sh
+
+sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+
+Add this line: 
+
+@lxterminal -e /home/pi/Desktop/test.sh
+
+sudo reboot
+```
 
 
 ### Raspberry Pi Safe Shutdown Button
@@ -169,7 +192,7 @@ Save and exit (CTRL+O, CTRL+X with nano).
 
 ```
 
-
+I couldnt get the python file to run directly from Cron (probably because it requires Python3)  I also tried autstart (interferes with virtualAGC) and another method which failed too.  This works! 
 
 shutdown.py contents:
 
@@ -207,6 +230,7 @@ pause()    # handle the button presses in the background
 ```
 
 shutdown.sh contents:
+
 ```
 #!/bin/bash
 echo "Starting Safe SHutdown"
@@ -214,27 +238,6 @@ cd /home/pi/Desktop/
 python3 shutdown.py
 
 ```
-
-
-### Start The AGC automatically at boot
-
-https://forums.raspberrypi.com/viewtopic.php?t=263191,
-
-```
-Make out shell script on Desktop exectable 
-
-chmod 755 test.sh
-
-sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
-
-Add this line: 
-
-@lxterminal -e /home/pi/Desktop/test.sh
-
-
-sudo reboot
-```
-
 
 ### Probably not needed anymore:
 
