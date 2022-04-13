@@ -136,7 +136,7 @@ Install provided ericDSKY.py in /home/pi/virtualagc/piPeripheral/
 
 Contents of ericDSKY.py
 ```
-way too big for the readme but I had to edit from the original file to run
+Way too big for the readme but I had to edit from the original file to run
 
 ```
 
