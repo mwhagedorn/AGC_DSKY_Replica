@@ -24,6 +24,10 @@ I will doccument the whole build in a Playlist on MKME Lab channel
 Forum thread documenting this build:
 
 http://forum.mkme.org/viewtopic.php?f=4&t=1156
+
+<p align="center"><img src="https://github.com/MKme/AGC_DSKY_Replica/blob/master/Photos/MKME%20Lab%20LED%20Panel/IMG_5001.jpg"/>  <br>
+Kit
+  <br>
  
 ## Parts:
 
