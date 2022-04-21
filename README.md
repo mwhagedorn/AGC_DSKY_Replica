@@ -42,7 +42,10 @@ Exact parts and supplies I used
 |M3x5mm(L)-5.4mm(OD) brass inserts (some holes are big| https://amzn.to/35Yzz9P
 | 90 degree USBC Cable | https://amzn.to/3otdNkN
 | 90 degree Micro HDMI | https://amzn.to/3sq0qDf
-| DSKY LED PCB KIT | TBD 
+| DSKY LED PCB KIT  | https://store.mkme.org/?product=apollo-guidance-computer-dsky-led-panel
+| DSKY LED PCB KIT Mount Files  | https://store.mkme.org/?product=apollo-guidance-computer-dsky-led-panel-3d-printable-mount-files
+
+
 
 
 ## Full video here:
@@ -54,6 +57,8 @@ All initial videos are included in the forum thread above- they are VLOGs of the
 ## Assembly
 
 - Print all parts and assemble.  No way I'm typing this up :)
+
+Buy a kit from my store here: https://store.mkme.org/?product=apollo-guidance-computer-dsky-led-panel
 
 ## Programming Arduinos
 
