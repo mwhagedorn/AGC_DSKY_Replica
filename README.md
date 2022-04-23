@@ -50,11 +50,11 @@ Exact parts and supplies I used
 | DSKY LED PCB KIT Mount Files  | https://store.mkme.org/?product=apollo-guidance-computer-dsky-led-panel-3d-printable-mount-files
 
 
-
-
-## Full video here:
-
-TBD http://youtube.com/mkmeorg
+## Full videos here:
+ 
+Full DSKY Build Playlist: https://www.youtube.com/watch?v=DMqIMjEPb30&list=PLxyM2a_cfnzg2HdUAhilZUEfA2GcerdL1
+ 
+ http://youtube.com/mkmeorg
 
 All initial videos are included in the forum thread above- they are VLOGs of the build steps and show a lot of how to make it 
 
