@@ -1,3 +1,5 @@
+#include <Nextion.h>
+
 /*receives serial data.
  * 
  * 
@@ -67,6 +69,9 @@ String r3;
 int compactystatus;
 int oldcompactystatus;
 
+int LED = 13;						// sets LED tso pin 13
+int DelayTime = 300;
+
 
 SoftwareSerial nextion(2, 3);// Nextion TX to pin 2 and RX to pin 3 of Arduino
 
@@ -111,21 +116,16 @@ void setup() {
   digitalWrite(PROG, LOW);
   digitalWrite(RESTART, LOW);
   digitalWrite(TRACKER, LOW);
+  pinMode(LED, OUTPUT);
 
-  Serial.begin(115200);
+  Serial.begin(9600);
   myNextion.init();
 
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
   recvWithEndMarker();
   processNewData();
-
-
-
-
 }
 
 
@@ -133,10 +133,8 @@ void recvWithEndMarker() {
   static byte ndx = 0;
   char endMarker = '\n';
   char rc;
-
   while (Serial.available() > 0 && newData == false) {
     rc = Serial.read();
-
     if (rc != endMarker) {
       receivedChars[ndx] = rc;
       ndx++;
@@ -154,9 +152,12 @@ void recvWithEndMarker() {
 
 void processNewData() {
   if (newData == true) {
-    //Serial.println(receivedChars);
+    Serial.println(receivedChars);
     writeToLED();
     writeToDisplay();
+    Turn_LED_On();
+    Wait_Some();
+    Turn_LED_Off();
     newData = false;
   }
 }
@@ -182,6 +183,7 @@ void writeToDisplay() {
   r2 = formatChar(receivedChars[26]) + formatChar(receivedChars[27]) + formatChar(receivedChars[28]) + formatChar(receivedChars[29]) + formatChar(receivedChars[30]) + formatChar(receivedChars[31]);
   r3 = formatChar(receivedChars[32]) + formatChar(receivedChars[33]) + formatChar(receivedChars[34]) + formatChar(receivedChars[35]) + formatChar(receivedChars[36]) + formatChar(receivedChars[37]);
   if (prog != oldprog) {
+    Serial.println("setprog");
     myNextion.setComponentText("p", prog);
     oldprog = prog;
   }
@@ -267,3 +269,20 @@ String formatChar(char input) {
   }
   return output;
 }
+
+void Turn_LED_On()					// declares function to turn LED on
+{
+	digitalWrite(LED, HIGH);		// brings LED pin HIGH, turning it on
+}
+
+void Turn_LED_Off()					// declares function to turn LED off
+{
+	digitalWrite(LED, LOW);			// brings LED pin LOW, turning it off
+}
+
+void Wait_Some()					// declares function for delay
+{
+	delay(DelayTime);				// pauses for DelayTime in 1/1000s sececond
+}
+
+
