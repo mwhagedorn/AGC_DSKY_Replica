@@ -52,6 +52,7 @@ import termios
 import fcntl
 import socket
 import serial
+import queue as _queue
 from time import sleep
 
 # Parse command-line arguments.
@@ -118,6 +119,35 @@ def packetize(tuple):
 # would indicate that the lowest 5 bits of channel 15 (octal) were valid, and that
 # the value of those bits were 11001 (binary), which collectively indicate that
 # the KEY REL key on a DSKY is pressed.
+###############################################################################
+# FIFO input from Elixir keyboard scanner
+_FIFO_PATH = '/tmp/dsky_keys'
+_fifo_queue = _queue.Queue()
+
+def _fifo_reader():
+    """Blocking thread: re-opens the FIFO each time the writer reconnects."""
+    while True:
+        try:
+            with open(_FIFO_PATH, 'r') as fifo:
+                for line in fifo:
+                    ch = line.strip()
+                    if ch:
+                        _fifo_queue.put(ch)
+        except Exception:
+            time.sleep(0.1)
+
+_fifo_thread = threading.Thread(target=_fifo_reader, daemon=True)
+_fifo_thread.start()
+
+def get_char_fifo_nonblock():
+    """Return a character from the Elixir FIFO, or '' if none waiting."""
+    try:
+        return _fifo_queue.get_nowait()
+    except _queue.Empty:
+        return ''
+
+###############################################################################
+
 resetCount = 0
 def parseDskyKey(ch):
 	global resetCount
@@ -309,7 +339,7 @@ def codeToString(code):
 #	[ (channel0,value0,mask0), (channel1,value1,mask1), ...]
 # and may be en empty list.  
 def inputsForAGC():
-	ch = get_char_keyboard_nonblock()
+	ch = get_char_fifo_nonblock() or get_char_keyboard_nonblock()
 	ch = ch.upper()
 	if ch == '_':
 		ch = '-'
