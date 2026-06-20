@@ -5,7 +5,7 @@ defmodule DskyKeyboardInput.MixProject do
     [
       app: :dsky_keyboard_input,
       version: "0.1.0",
-      elixir: "~> 1.19",
+      elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       deps: deps(Mix.env())
     ]

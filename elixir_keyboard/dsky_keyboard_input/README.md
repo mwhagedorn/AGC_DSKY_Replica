@@ -16,6 +16,42 @@ physical 3×7 keypad
   → AgcClient (TCP to 127.0.0.1:19697)
 ```
 
+## Toolchain (Elixir 1.14)
+
+This project targets **Elixir 1.14** (`mix.exs` requires `~> 1.14`). The exact
+versions are pinned in `.tool-versions` for `asdf`/`mise`:
+
+```text
+erlang 25.3.2.16
+elixir 1.14.5-otp-25
+```
+
+From the project directory, `mise install` (or `asdf install`) picks these up.
+
+### Building OTP 25 on a modern GCC
+
+GCC 14+ defaults to the C23 standard, where `bool`/`true`/`false` are reserved
+keywords that OTP 25's `dist.c` redefines — so the Erlang build fails with
+errors like `two or more data types in declaration specifiers`. Build with the
+older C standard:
+
+```bash
+CFLAGS="-std=gnu17 -O2 -g" CXXFLAGS="-std=gnu++17 -O2 -g" mise install
+```
+
+This is only needed at **build time**; the flag is baked into the installed
+Erlang, so day-to-day use needs nothing special. (On Raspberry Pi OS, which
+ships an older GCC, the plain build usually works.)
+
+### mise: use activation, not shims
+
+If you manage versions with `mise`, use shell activation
+(`eval "$(mise activate zsh)"` in your shell rc) rather than shims. Elixir's
+launcher resolves its own path to find its `ebin` dirs; through a mise *shim*
+that resolution misses the real install and Elixir crashes at startup with
+`{undef, [{elixir, start_cli, ...}]}`. Activation puts the real install `bin`
+dirs on `PATH` and avoids this.
+
 ## Module layout
 
 | Module        | Responsibility |
