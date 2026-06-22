@@ -4,37 +4,38 @@ defmodule DskyKeyboardInput.KeymapTest do
   alias DskyKeyboardInput.Keymap
 
   describe "key_for_position/1" do
-    test "row 0 control keys" do
+    test "row 0" do
       assert Keymap.key_for_position({0, 0}) == :verb
-      assert Keymap.key_for_position({0, 1}) == :noun
-      assert Keymap.key_for_position({0, 2}) == :plus
-      assert Keymap.key_for_position({0, 3}) == :minus
-      assert Keymap.key_for_position({0, 4}) == :clear
-      assert Keymap.key_for_position({0, 5}) == :pro
-      assert Keymap.key_for_position({0, 6}) == :key_rel
+      assert Keymap.key_for_position({0, 1}) == :plus
+      assert Keymap.key_for_position({0, 2}) == {:digit, 7}
+      assert Keymap.key_for_position({0, 3}) == {:digit, 8}
+      assert Keymap.key_for_position({0, 4}) == {:digit, 9}
+      assert Keymap.key_for_position({0, 5}) == :clear
+      assert Keymap.key_for_position({0, 6}) == :enter
     end
 
     test "row 1 digits and control keys" do
-      assert Keymap.key_for_position({1, 0}) == {:digit, 7}
-      assert Keymap.key_for_position({1, 1}) == {:digit, 8}
-      assert Keymap.key_for_position({1, 2}) == {:digit, 9}
-      assert Keymap.key_for_position({1, 3}) == :enter
-      assert Keymap.key_for_position({1, 4}) == :reset
+      assert Keymap.key_for_position({1, 0}) == :noun
+      assert Keymap.key_for_position({1, 1}) == :minus
+      assert Keymap.key_for_position({1, 2}) == {:digit, 4}
+      assert Keymap.key_for_position({1, 3}) == {:digit, 5}
+      assert Keymap.key_for_position({1, 4}) == {:digit, 6}
+      assert Keymap.key_for_position({1, 5}) == :pro
     end
 
-    test "row 2 digits" do
-      assert Keymap.key_for_position({2, 0}) == {:digit, 4}
-      assert Keymap.key_for_position({2, 1}) == {:digit, 5}
-      assert Keymap.key_for_position({2, 2}) == {:digit, 6}
-      assert Keymap.key_for_position({2, 3}) == {:digit, 1}
-      assert Keymap.key_for_position({2, 4}) == {:digit, 2}
-      assert Keymap.key_for_position({2, 5}) == {:digit, 3}
-      assert Keymap.key_for_position({2, 6}) == {:digit, 0}
+    test "row 2" do
+      assert Keymap.key_for_position({2, 0}) == nil
+      assert Keymap.key_for_position({2, 1}) == {:digit, 0}
+      assert Keymap.key_for_position({2, 2}) == {:digit, 1}
+      assert Keymap.key_for_position({2, 3}) == {:digit, 2}
+      assert Keymap.key_for_position({2, 4}) == {:digit, 3}
+      assert Keymap.key_for_position({2, 5}) == :key_rel
+      assert Keymap.key_for_position({2, 6}) == nil
     end
 
     test "unused positions are nil" do
-      assert Keymap.key_for_position({1, 5}) == nil
-      assert Keymap.key_for_position({1, 6}) == nil
+      assert Keymap.key_for_position({2, 0}) == nil
+      assert Keymap.key_for_position({2, 6}) == nil
       assert Keymap.key_for_position({9, 9}) == nil
     end
   end

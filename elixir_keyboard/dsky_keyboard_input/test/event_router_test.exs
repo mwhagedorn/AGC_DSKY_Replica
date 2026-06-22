@@ -27,20 +27,20 @@ defmodule DskyKeyboardInput.EventRouterTest do
   end
 
   test "digit key routes through the keymap" do
-    EventRouter.key_event(:key_down, {2, 6})
+    EventRouter.key_event(:key_down, {2, 1})
     assert_receive {:op, {0o15, 0o20, 0o37}}
   end
 
   test "PRO sends distinct press and release operations" do
-    EventRouter.key_event(:key_down, {0, 5})
+    EventRouter.key_event(:key_down, {1, 5})
     assert_receive {:op, {0o32, 0o00000, 0o20000}}
 
-    EventRouter.key_event(:key_up, {0, 5})
+    EventRouter.key_event(:key_up, {1, 5})
     assert_receive {:op, {0o32, 0o20000, 0o20000}}
   end
 
   test "unused matrix position produces no operation" do
-    EventRouter.key_event(:key_down, {1, 5})
+    EventRouter.key_event(:key_down, {2, 0})
     refute_receive {:op, _}, 50
   end
 end

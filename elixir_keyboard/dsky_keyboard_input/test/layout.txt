@@ -1,0 +1,9 @@
+# this is the desired layout
+e
+#key   (r,c) (desired)   (actual)      (current)
+:verb   0,0                 0,0
+:noun   1,0                 0,1        digit 7 
+:plus   0,1                 0,2        :noun   
+:minus  1,1                 0,3        digit 8
+:zero   2,1                            digit 5
+:seven  0,2                 1,0            ;plus1

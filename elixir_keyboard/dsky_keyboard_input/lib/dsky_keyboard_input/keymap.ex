@@ -5,10 +5,10 @@ defmodule DskyKeyboardInput.Keymap do
 
   Matrix layout (3 rows x 7 columns), per the project plan:
 
-      | R/C | C0   | C1   | C2  | C3    | C4    | C5      | C6      |
-      | R0  | VERB | NOUN | +   | -     | CLR   | PRO     | KEY REL |
-      | R1  | 7    | 8    | 9   | ENTER | RESET | UNUSED  | UNUSED  |
-      | R2  | 4    | 5    | 6   | 1     | 2     | 3       | 0       |
+      | R/C | C0     | C1 | C2 | C3 | C4 | C5      | C6     |
+      | R0  | VERB   | +  | 7  | 8  | 9  | CLR     | ENTER  |
+      | R1  | NOUN   | -  | 4  | 5  | 6  | PRO     | RESET  |
+      | R2  | UNUSED | 0  | 1  | 2  | 3  | KEY REL | UNUSED |
 
   Channel/value/mask values mirror the `parseDskyKey` table in `ericDSKY.py`.
   The `PRO` key is special: it has distinct pressed and released operations and
@@ -52,7 +52,7 @@ defmodule DskyKeyboardInput.Keymap do
   @doc """
   Translate a `{row, col}` matrix position into a logical DSKY key.
 
-  Returns `nil` for the two unused positions (`{1, 5}` and `{1, 6}`).
+  Returns `nil` for the two unused positions (`{2, 0}` and `{2, 6}`).
   """
   @spec key_for_position({non_neg_integer(), non_neg_integer()}) :: logical_key() | nil
   def key_for_position({0, 0}), do: :verb
@@ -61,21 +61,21 @@ defmodule DskyKeyboardInput.Keymap do
   def key_for_position({1, 1}), do: :minus
   def key_for_position({0, 5}), do: :clear
   def key_for_position({1, 5}), do: :pro
-  def key_for_position({2, 4}), do: :key_rel
+  def key_for_position({2, 5}), do: :key_rel
+  def key_for_position({0,6}),  do: :enter
 
   def key_for_position({0, 2}), do: {:digit, 7}
   def key_for_position({0, 3}), do: {:digit, 8}
   def key_for_position({0, 4}), do: {:digit, 9}
-  def key_for_position({1, 4}), do: :enter
   def key_for_position({1, 6}), do: :reset
 
   def key_for_position({1, 2}), do: {:digit, 4}
   def key_for_position({1, 3}), do: {:digit, 5}
   def key_for_position({1, 4}), do: {:digit, 6}
-  def key_for_position({2, 1}), do: {:digit, 1}
-  def key_for_position({2, 2}), do: {:digit, 2}
-  def key_for_position({2, 3}), do: {:digit, 3}
-  def key_for_position({2, 0}), do: {:digit, 0}
+  def key_for_position({2, 2}), do: {:digit, 1}
+  def key_for_position({2, 3}), do: {:digit, 2}
+  def key_for_position({2, 4}), do: {:digit, 3}
+  def key_for_position({2, 1}), do: {:digit, 0}
 
   def key_for_position(_), do: nil
 
