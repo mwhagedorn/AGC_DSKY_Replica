@@ -41,11 +41,11 @@
 #define KEY 9
 #define ERR 8
 
-#define TEMP 14
-#define GIMBAL 15
-#define PROG 16
-#define RESTART 17
-#define TRACKER 18
+#define TEMP 7
+#define GIMBAL 6
+#define PROG A0
+#define RESTART 3
+#define TRACKER 2
 
 
 const byte numChars = 40;
@@ -73,7 +73,7 @@ int LED = 13;						// sets LED tso pin 13
 int DelayTime = 300;
 
 
-SoftwareSerial nextion(2, 3);// Nextion TX to pin 2 and RX to pin 3 of Arduino
+SoftwareSerial nextion(4, 5);// Nextion RX on pin 4, TX on pin 5
 
 Nextion myNextion(nextion, 9600); //create a Nextion object named myNextion using the nextion serial port @ 9600bps
 
@@ -90,33 +90,23 @@ void setup() {
   pinMode(PROG, OUTPUT);
   pinMode(RESTART, OUTPUT);
   pinMode(TRACKER, OUTPUT);
+  digitalWrite(TRACKER,LOW);
 
 
 
-  digitalWrite(UPLINK, HIGH);
-  digitalWrite(ATT, HIGH);
-  digitalWrite(STBY, HIGH);
-  digitalWrite(KEY, HIGH);
-  digitalWrite(ERR, HIGH);
-  digitalWrite(TEMP, HIGH);
-  digitalWrite(GIMBAL, HIGH);
-  digitalWrite(PROG, HIGH);
-  digitalWrite(RESTART, HIGH);
-  digitalWrite(TRACKER, HIGH);
 
-  delay (5000); 
-
-  digitalWrite(UPLINK, LOW);
-  digitalWrite(ATT, LOW);
-  digitalWrite(STBY, LOW);
-  digitalWrite(KEY, LOW);
-  digitalWrite(ERR, LOW);
-  digitalWrite(TEMP, LOW);
-  digitalWrite(GIMBAL, LOW);
-  digitalWrite(PROG, LOW);
-  digitalWrite(RESTART, LOW);
-  digitalWrite(TRACKER, LOW);
-  pinMode(LED, OUTPUT);
+  blinkCW(UPLINK);
+  blinkCW(ATT);
+  blinkCW(STBY);
+  blinkCW(KEY);
+  blinkCW(ERR);
+  delay (500); 
+  blinkCW(TEMP);
+  blinkCW(GIMBAL);
+  blinkCW(PROG);
+  blinkCW(RESTART);
+  blinkCW(TRACKER);
+  delay (500); 
 
   Serial.begin(9600);
   myNextion.init();
@@ -126,6 +116,12 @@ void setup() {
 void loop() {
   recvWithEndMarker();
   processNewData();
+}
+
+void blinkCW(int pin) {
+  digitalWrite(pin, HIGH);
+  delay (800); 
+  digitalWrite(pin,LOW);
 }
 
 

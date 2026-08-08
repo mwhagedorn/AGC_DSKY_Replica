@@ -14,8 +14,8 @@
 #include <Keypad.h>
 #include <Keyboard.h>
 
-const byte ROWS = 5; //four rows
-const byte COLS = 4; //four columns
+const byte ROWS = 3; //threee rows
+const byte COLS = 7; //seven columns
 //define the cymbols on the buttons of the keypads
 //DONE: Converted numbers and symbols to ascii codes
 //222 '\336' Keypad -
@@ -31,22 +31,23 @@ const byte COLS = 4; //four columns
 //232 '\350' Keypad 8 and Up Arrow
 //233 '\351' Keypad 9 and PageUp
 //234 '\352' Keypad 0 and Insert
+// ! is a Dont care
 char hexaKeys[ROWS][COLS] = {
-  {'C', 'P', 'K', 'E'},
-  {'9', '6', '3', 'R'},
-  {'8', '5', '2', 'E'},
-  {'7', '4', '1', 'N'},
-  {'+', '-', '0', 'V'}
+{'!', '+', '7', '8', '9', 'C', '!'},
+{'V', '-', '4', '5', '6', 'P', 'E'},
+{'N', '0', '1', '2', '3', 'K', 'R'},
 };
-byte rowPins[ROWS] = {6, 5, 4, 3, 2}; //connect to the row pinouts of the keypad
-byte colPins[COLS] = {10, 9, 8, 7}; //connect to the column pinouts of the keypad
+
+byte rowPins[ROWS] = {4, 3, 2}; //connect to the row pinouts of the keypad
+byte colPins[COLS] = {16, 10, 9, 8, 7, 6, 5}; //connect to the column pinouts of the keypad
 
 //initialize an instance of class NewKeypad
-Keypad customKeypad = Keypad( makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS);
+Keypad customKeypad = Keypad( makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS); 
 
 void setup() {
   Serial.begin(9600);
   Keyboard.begin();
+  Serial.println("hello");
 }
 
 void loop() {
